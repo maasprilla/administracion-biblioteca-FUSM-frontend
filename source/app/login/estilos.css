@@ -1,0 +1,31 @@
+.LoginHeaderMajor-container {
+  padding-top: 5em;
+  padding-bottom: 1em;
+}
+section.LoginHeaderMajor-container>div.container>div.jumbotron {
+  background: #152836;
+}
+div.jumbotron>h1.LoginHeader-title {
+  color: #fff;
+}
+.LoginHeader-text {
+  color: #fff;
+}
+.SectionLogin {
+  background-color: #fafafa;
+  font-family: 'Open Sans';
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+.FormLogin {
+  max-width: 35em;
+  display: inline-block;
+  background-color: #fffafa;
+  box-shadow: 0.1em 0.1em #555;
+  border-radius: 0.5em;
+  padding: 2em;
+}
+.FormLogin-tittle {
+  margin-bottom: 1em;
+}

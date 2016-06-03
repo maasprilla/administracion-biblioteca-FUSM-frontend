@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Biblioteca FUSM</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- build:css css/style.min.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="lib/ng-table/dist/ng-table.min.css">
+    <link rel="stylesheet" href="lib/hover/css/hover-min.css"/>
+    <link rel="stylesheet" href="lib/angularjs-datepicker/dist/angular-datepicker.min.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/footer/estilos.css">
+    <link rel="stylesheet" href="/app/header/estilos.css">
+    <link rel="stylesheet" href="/app/home/estilos.css">
+    <link rel="stylesheet" href="/app/login/estilos.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <encabezado></encabezado>
+
+    <div ui-view ></div>
+
+    <piedepagina></piedepagina>
+
+
+
+    <!-- build:js js/vendor.min.js -->
+    <!-- bower:js -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-aria/angular-aria.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.min.js"></script>
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
+    <script src="lib/angular-material/angular-material.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-filter/dist/angular-filter.min.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/satellizer/satellizer.min.js"></script>
+    <script src="lib/ng-table/dist/ng-table.min.js"></script>
+    <script src="lib/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <!-- inject:js -->
+    <script src="/app/app.module.js"></script>
+    <script src="/app/templates.js"></script>
+    <script src="/app/config/app.constantes.js"></script>
+    <script src="/app/config/app.on-read-img.directive.js"></script>
+    <script src="/app/footer/app.directive.js"></script>
+    <script src="/app/footer/app.module.js"></script>
+    <script src="/app/header/anclasambiental.js"></script>
+    <script src="/app/header/anclasindex.js"></script>
+    <script src="/app/header/anclasportafolio.js"></script>
+    <script src="/app/header/app.directive.js"></script>
+    <script src="/app/header/app.module.js"></script>
+    <script src="/app/header/showpanels.js"></script>
+    <script src="/app/header/trasparent.js"></script>
+    <script src="/app/home/app.directive.js"></script>
+    <script src="/app/home/app.module.js"></script>
+    <script src="/app/home/app.router.js"></script>
+    <script src="/app/login/app.controller.js"></script>
+    <script src="/app/login/app.directive.js"></script>
+    <script src="/app/login/app.module.js"></script>
+    <script src="/app/login/app.router.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+
+</html>

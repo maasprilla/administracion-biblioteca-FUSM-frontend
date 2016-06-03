@@ -1,0 +1,38 @@
+<section class="LoginHeaderMajor-container">
+	<div class="container LoginHeaderContent">
+		<div class="jumbotron">
+			<h1 class="text-center LoginHeader-title">Botica</h1>
+			<p class="text-center LoginHeader-text">"Salud al alcance de su mano"</p>
+			<div class="text-center LoginHeaderIcon-container">
+				<i class="material-icons" style="font-size:48px;color:white">tag_faces</i>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="SectionLogin">
+                    <form class="FormLogin" ng-submit="vm.signIn()">
+                        <h1 class="text-center FormLogin-tittle">Inicio de Sesión</h1>
+                        <md-input-container class="md-block">
+                          <label>Email*</label>
+                          <input required type="email" name="clientEmail" ng-model="vm.user.email"
+                          minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                          <div ng-messages="FormLogin.clientEmail.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                              Your email must be between 10 and 100 characters long and look like an e-mail address.
+                            </div>
+                          </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                          <label>Password*</label>
+                          <input required type="password" name="clientName" ng-model="vm.user.password">
+                          <div ng-messages="FormLogin.clientName.$error">
+                            <div ng-message="required">This is required.</div>
+                          </div>
+                        </md-input-container>
+                        <md-button type="submit" md-no-ink class="md-raised md-primary" ng-disabled="FormLogin.$invalid">Login</md-button>                        <!--<button class="btn btn-primary waves-effect waves-light"
+                                type="submit"
+                                >
+                            Login
+                        </button>-->
+                    </form>
+                </section>
