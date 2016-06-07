@@ -13,17 +13,9 @@
       $stateProvider
       .state('homeadmin',{
         url: '/homeadmin',
-        views:{
-          'encabezadoadminauth':{
-             template: '<encabezadoadminauth/>'
-          },
-          'homeadmin':{
+        
              template: '<homeadmin/>'
-          },
-          'piedepagina':{
-             template: '<piedepagina/>'
-          }
-        }
+
       });
 
 

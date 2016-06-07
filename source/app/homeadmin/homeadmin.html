@@ -15,12 +15,16 @@
           <div id="regisusers" class="RegisUsers-container">
 
             <div class="RegisUsers-formContainer">
-              <form class="RegisUsers-form" ng-submit="vm.create()">
+              <form id="formRegistroUser" class="RegisUsers-form" ng-submit="vm.create()">
                 <h2 class="text-center RegisUsers-title">Registrar Usuarios</h2>
 
                 <md-input-container class="md-block">
-                  <label>Nombre</label>
-                  <input md-maxlength="30" required md-no-asterisk name="names">
+                  <label>nombre</label>
+                  <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="formRegistroUser.nombre">
+                  <div ng-messages="formRegistroUser.nombre.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                  </div>
                 </md-input-container>
 
                 <md-input-container class="md-block">

@@ -13,17 +13,7 @@
     $stateProvider
                   .state('login',{
                     url: '/',
-                    views:{
-                      'encabezado':{
-                         template: '<encabezado/>'
-                      },
-                      'login':{
-                         template: '<login/>'
-                      },
-                      'piedepagina':{
-                         template: '<piedepagina/>'
-                      }
-                    }
+                    template: '<login/>'                        
                   });
   }
 })();

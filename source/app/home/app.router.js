@@ -13,17 +13,9 @@
       $stateProvider
       .state('home',{
         url: '/home',
-        views:{
-          'encabezadoauth':{
-             template: '<encabezadoauth/>'
-          },
-          'home':{
              template: '<home/>'
-          },
-          'piedepagina':{
-             template: '<piedepagina/>'
-          }
-        }
+
+        
       });
 
 
