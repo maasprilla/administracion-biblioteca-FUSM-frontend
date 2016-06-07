@@ -1,0 +1,29 @@
+<header class="Header">
+			<div class="navbar navbar-fixed-top MainMenuAdminAuth" role="navigation" style="margin-bottom:0">
+				<div class="container-fluid NavbarElements-containerAdminAuth">
+					<div class="navbar-header">
+						<div class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="border-color:none">
+							<span class="icon-bar" style="background:#fff"></span>
+							<span class="icon-bar" style="background:#fff"></span>
+							<span class="icon-bar" style="background:#fff"></span>
+						</div>
+						<div class="LogoMajor-container">
+							<a class="navbar-brand pull-left" href="#/home">
+                <img alt="Brand" src="./images/logo.png" class="Logo-image" style="width:100%">
+              </a>
+						</div>
+          </div>
+					<div class="navbar-collapse collapse MainMenu-listContainerAdminAuth">
+						<ul class="nav navbar-nav navbar-right MainMenu-listAdminAuth"><!-- navbar-nav -->
+							<li id="" class="MainMenu-itemAdminAuth ItemsAdminMobile"><a href="" onclick="anclaregisusers();" class="MainMenu-linkAdminAuth">Registrar Usuarios</a></li>
+							<li id="" class="MainMenu-itemAdminAuth ItemsAdminMobile"><a href="" onclick="anclauserslist();" class="MainMenu-linkAdminAuth">Lista de Usuarios</a></li>
+							<li id="" class="MainMenu-itemAdminAuth ItemsAdminMobile"><a href="" onclick="anclareqlisttable();" class="MainMenu-linkAdminAuth">Solicitudes de Prestamos</a></li>
+							<li id="" class="MainMenu-itemAdminAuth ItemsAdminMobile"><a href="" onclick="anclahistorialadmin();" class="MainMenu-linkAdminAuth">Mi Historial</a></li>
+							<li id="" class="MainMenu-itemAdminAuth ItemsAdminMobile"><a href="" onclick="anclasettingsadmin();" class="MainMenu-linkAdminAuth">Ajustes</a></li>
+							<li class="MainMenu-itemAdminAuth"><a href="" class="MainMenu-linkAdminAuth"><span class="glyphicon glyphicon-user" style="color:#fff;"></span>{{vm.getCurrentUser()}}</a></li>
+							<li class="MainMenu-itemAdminAuth"><a href="/" ng-click="vm.logout()" class="MainMenu-linkAdminAuth">Cerrar Sesión</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>

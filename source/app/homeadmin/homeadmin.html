@@ -1,0 +1,137 @@
+<div class="Major-container">
+  <section class="AdminFunctions-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2 SidenavAdmin-container">
+          <ul class="nav nav-pills nav-stacked SidenavAdmin" role="menu">
+            <li><a href="" class="Sidenav-linkAdminAuth" onclick="anclaregisusers();">Registrar Usuarios</a></li>
+            <li><a href="" class="Sidenav-linkAdminAuth" onclick="anclauserslist();">Lista de Usuarios</a></li>
+            <li><a href="" class="Sidenav-linkAdminAuth" onclick="anclareqlisttable();">Solicitudes de Prestamos</a></li>
+            <li><a href="" class="Sidenav-linkAdminAuth" onclick="anclahistorialadmin();">Mi Historial</a></li>
+            <li><a href="" class="Sidenav-linkAdminAuth" onclick="anclasettingsadmin();">Ajustes</a></li>
+          </ul>
+        </div>
+        <div id="ContentAdmin" class="col-sm-10" style="text-align:center; padding-top:6em;">
+          <div id="regisusers" class="RegisUsers-container">
+
+            <div class="RegisUsers-formContainer">
+              <form class="RegisUsers-form" ng-submit="vm.create()">
+                <h2 class="text-center RegisUsers-title">Registrar Usuarios</h2>
+
+                <md-input-container class="md-block">
+                  <label>Nombre</label>
+                  <input md-maxlength="30" required md-no-asterisk name="names">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+          				<label>Email (*)</label>
+          				<input required type="email" name="clientEmail" ng-model="vm.user.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+          				<div ng-messages="FormLogin.clientEmail.$error" role="alert">
+          					<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+          						Your email must be between 10 and 100 characters long and look like an e-mail address.
+          					</div>
+          				</div>
+          			</md-input-container>
+          			<md-input-container class="md-block">
+          				<label>Password (*)</label>
+          				<input required type="password" name="clientName" ng-model="vm.user.password">
+          				<div ng-messages="FormLogin.clientName.$error">
+          					<div ng-message="required">This is required.</div>
+          				</div>
+          			</md-input-container>
+
+                <div class="RegisUsers-buttonContainer">
+                  <md-button type="submit" ng-click="vm.request()" md-no-ink class="md-raised md-primary" class="RegisUsers-button">Guardar</md-button>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+          <div id="userslist" class="UsersList-container">
+            <h2 class="text-center UsersList-title">Listado de Usuarios</h2>
+
+            <div class="PrestamoListTable">
+              <table id="table" class="table table-hover PrestamoListTable-table" ng-table="vm.presbookTable">
+                <tr>
+                  <td data-title="'Ejemplar'" >
+                    {{presbook.ejemplar}}
+                  </td>
+                  <td data-title="'Libro'" >
+                    {{presbook.libro}}
+                  </td>
+                  <td data-title="'Inicio'" >
+                    {{presbook.inicio}}
+                  </td>
+                  <td data-title="'Final'" >
+                    {{presbook.final}}
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+          <div id="reqlisttable" class="ReqListTable-container">
+            <h2 class="text-center ReqListTable-title">Solicitudes de Prestamos</h2>
+
+            <div class="PrestamoListTable">
+              <table id="table" class="table table-hover PrestamoListTable-table" ng-table="vm.presbookTable">
+                <tr>
+                  <td data-title="'Ejemplar'" >
+                    {{presbook.ejemplar}}
+                  </td>
+                  <td data-title="'Libro'" >
+                    {{presbook.libro}}
+                  </td>
+                  <td data-title="'Inicio'" >
+                    {{presbook.inicio}}
+                  </td>
+                  <td data-title="'Final'" >
+                    {{presbook.final}}
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+          <div id="historialadmin" class="HistorialAdmin-container">
+            <h2 class="text-center HistorialAdmin-title">Historial</h2>
+
+            <div class="HistorialTable">
+              <table id="table" class="table table-hover HistorialTable-table" ng-table="vm.presbookTable">
+                <tr>
+                  <td data-title="'Ejemplar'" >
+                    {{presbook.ejemplar}}
+                  </td>
+                  <td data-title="'Libro'" >
+                    {{presbook.libro}}
+                  </td>
+                  <td data-title="'Inicio'" >
+                    {{presbook.inicio}}
+                  </td>
+                  <td data-title="'Final'" >
+                    {{presbook.final}}
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div id="settingsadmin" class="SettingsAdmin-container">
+            <h2 class="text-center SettingsAdmin-title">Ajustes</h2>
+            <br>
+            <h4 class="text-center Settings-text">¿Olvidaste tu contraseña?</h4>
+            <br>
+            <div class="thumbnail hvr-glow SettingsAdminContent" style="margin-bottom:0.7em;">
+							<div class="SettingsIcon-container hvr-hang">
+								<i class="material-icons" style="font-size:48px">arrow_downward</i>
+							</div>
+							<div class="SettingsLinkAdmin-container">
+								<a href="" class="SettingsAdmin-link btn btn-info">Recuperala aquí</a>
+							</div>
+						</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,60 +1,46 @@
 .Major-container
   min-height calc(80vh)
 
-ul.Sidenav>li>a.Sidenav-linkAuth:hover
+ul.SidenavAdmin>li>a.Sidenav-linkAdminAuth:hover
   background #fff
   color #2C4C8B
   font-weight 700
 
-.nav-pills>li.active>a.Sidenav-linkAuth
+.nav-pills>li.active>a.Sidenav-linkAdminAuth
   color #fff
   background-color #337ab7
 
-ul.Sidenav>li>a.Sidenav-linkAuth:active
+ul.SidenavAdmin>li>a.Sidenav-linkAdminAuth:active
   color #fff
   background-color #337ab7
 
-ul.Sidenav>li.active>a.Sidenav-linkAuth:focus
+ul.SidenavAdmin>li.active>a.Sidenav-linkAdminAuth:focus
   color #fff
   background-color #337ab7
 
-.nav>li>a.Sidenav-linkAuth:hover, .nav-pills>li>a.Sidenav-linkAuth:focus
+.nav>li>a.Sidenav-linkAdminAuth:hover, .nav-pills>li>a.Sidenav-linkAdminAuth:focus
   color #fff
   background-color #337ab7
 
-.PrestamoRequest-container, .PrestamosList-container, .Historial-container, .Settings-container
+.RegisUsers-container, .UsersList-container, .ReqListTable-container, .HistorialAdmin-container, .SettingsAdmin-container
   display none
 
-.PrestamoRequest-title, .PrestamoList-title, .Historial-title, .Settings-title
+.RegisUsers-title, .UsersList-title, .ReqListTable-title, .HistorialAdmin-title, .SettingsAdmin-title
   margin-bottom 1em
 
-.PrestamoList-title, .Historial-title, .Settings-title
+.UsersList-title, .ReqListTable-title, .HistorialAdmin-title, .SettingsAdmin-title
   padding-bottom 0.3em
   border-bottom 1px solid
   display inline-block
 
-.SearchInput-container
-  display inline-block
-
-.SearchIcon-container
-  display inline-block
-
-.RequestedBooks-title
-  margin-top 2em
-
-.AddBook
-  text-align left
-  border-style ridge
-  padding 0.7em
-
-.PrestamoRequest-buttonContainer
-  text-align right
+.RegisUsers-buttonContainer
+  text-align center
   margin-top 1em
 
-.SettingsLink-container
+.SettingsLinkAdmin-container
   margin-top 0.5em
 
-div.SettingsLink-container>a.btn-info
+div.SettingsLinkAdmin-container>a.btn-info
   background-color #2C4C8B
   color #fff
   width 100%
@@ -83,38 +69,36 @@ div.SettingsLink-container>a.btn-info
     border 1px solid #2C4C8B
 
 @media screen and (min-width: 768px)
-  div.Sidenav-container
+  div.SidenavAdmin-container
     padding-left 0
     height 100%
     width 16.66666667%
-  ul.Sidenav
+  ul.SidenavAdmin
     background-color #2C4C8B
     height 100%
     width 16.66666667%
     position fixed
     overflow auto
-  ul.Sidenav>li>a.Sidenav-linkAuth
+  ul.SidenavAdmin>li>a.Sidenav-linkAdminAuth
     color #fff
     padding 0.6em
   .SearchBook-input
     width 35em
     height 2.5em
-  .SettingsContent
+  .SettingsAdminContent
     width 35em
 
 @media screen and (max-width: 767px)
-  div.Sidenav-container
+  div.SidenavAdmin-container
     display none
-  #Content
+  #ContentAdmin
     padding-bottom 2em
-  .SearchIcon-container
-    padding-left 0.5em
 
 @media screen and (max-width: 767px) and (min-width: 438px)
   .SearchBook-input
     width 25em
     height 2.2em
-  .SettingsContent
+  .SettingsAdminContent
     width 27em
 
 @media screen and (max-width: 437px)
@@ -122,11 +106,11 @@ div.SettingsLink-container>a.btn-info
     width 100%
   div.PrestamoRequest-buttonContainer>.md-button.md-primary.md-raised
     font-size 11px
-  .SettingsContent
+  .SettingsAdminContent
     width 100%
 
 @media screen and (max-width: 392px)
-  .PrestamoRequest-title, .PrestamoList-title, .Historial-title, .Settings-title
+  .RegisUsers-title, .UsersList-title, .ReqListTable-title, .HistorialAdmin-title, .SettingsAdmin-title
     font-size 24px
   .RequestedBooks-title
     font-size 19px

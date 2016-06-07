@@ -15,7 +15,10 @@
         'app.footer',
         'app.header',
         'app.home',
-        'app.login'
+        'app.homeadmin',
+        'app.login',
+        'app.password.confirm',
+        'app.password.recovery'
     ]);
 
 })();

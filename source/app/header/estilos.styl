@@ -39,7 +39,7 @@ ul.nav>li>a.MainMenu-link
 
 
 
-/** Estilos sesión activa **/
+/** Estilos sesión activa usuario normal **/
 
 div.MainMenuAuth
   background-color #2C4C8B
@@ -79,6 +79,51 @@ ul.nav>li>a:hover
 
 @media screen and (max-width: 767px)
   #Content
+    position initial
+  span.glyphicon.glyphicon-search
+    position initial
+
+
+/** Estilos sesión activa administrador **/
+
+div.MainMenuAdminAuth
+  background-color #2C4C8B
+
+ul.nav>li>a
+  color #fff
+
+ul.nav>li>a:hover
+  background transparent
+
+.nav>li>a.MainMenu-linkAdminAuth:focus
+  background-color transparent
+
+@media screen and (min-width: 768px)
+  ul.nav>li>a
+    padding 2.8em 0.8em
+  header
+    height 99.38px
+  div.LogoMajor-container>a.navbar-brand
+    max-width 232px
+    margin-top -18px
+
+@media screen and (max-width: 767px)
+  div.navbar-header
+    padding 1em
+    header 79px
+  div.LogoMajor-container>a.navbar-brand
+    max-width 205px
+    margin-top -34px
+    margin-left -34px
+  header
+    height 79px
+
+@media screen and (min-width: 768px)
+  ul.nav>li.ItemsAdminMobile
+    display none
+
+@media screen and (max-width: 767px)
+  #ContentAdmin
     position initial
   span.glyphicon.glyphicon-search
     position initial
