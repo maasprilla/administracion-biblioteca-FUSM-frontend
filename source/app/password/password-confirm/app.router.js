@@ -13,17 +13,8 @@
       $stateProvider
               .state('password-confirm',{
                   url: '/passconfirm/:idUsuario/:codigo',
-                  views:{
-                    'encabezadoauth':{
-                       template: '<encabezadoauth/>'
-                    },
-                    'passconfirm':{
-                       template: '<passconfirm/>'
-                    },
-                    'piedepagina':{
-                       template: '<piedepagina/>'
-                    }
-                  }
+                       template: '<pass-confirm/>'
+
               });
 
 

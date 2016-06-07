@@ -3,11 +3,11 @@
 
     angular.module('app.password.confirm.directive', [
 
-    ]).directive('passconfirm', passconfirm);
+    ]).directive('passConfirm', passConfirm);
 
 
-    passconfirm.$inject = [];
-    function passconfirm(){
+    passConfirm.$inject = [];
+    function passConfirm(){
       return{
         scope:{},
         templateUrl:'app/password/password-confirm/password-confirm.html',

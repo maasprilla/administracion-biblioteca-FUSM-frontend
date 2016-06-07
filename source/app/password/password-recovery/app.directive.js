@@ -3,11 +3,11 @@
 
     angular.module('app.password.recovery.directive', [
 
-    ]).directive('passrecovery', passrecovery);
+    ]).directive('passRecovery', passRecovery);
 
 
-    passrecovery.$inject = [];
-    function passrecovery(){
+    passRecovery.$inject = [];
+    function passRecovery(){
       return{
         scope:{},
         templateUrl:'app/password/password-recovery/password-recovery.html',
