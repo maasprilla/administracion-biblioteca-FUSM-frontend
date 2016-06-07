@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-sm-2 Sidenav-container">
           <ul class="nav nav-pills nav-stacked Sidenav" role="menu">
-            <li><a href="#/usuarios-create" class="Sidenav-linkAuth">Registrar Usuarios</a></li>
+            <li ng-show="vm.isAdmin()"><a href="#/usuarios-create" class="Sidenav-linkAuth">Registrar Usuarios</a></li>
             <li><a href="#/prestamos-create" class="Sidenav-linkAuth">Solicitar Prestamo</a></li>
             <li><a href="#/prestamos-list" class="Sidenav-linkAuth">Lista de Prestamos</a></li>
             <li><a href="#/prestamos-historial" class="Sidenav-linkAuth">Mi Historial</a></li>

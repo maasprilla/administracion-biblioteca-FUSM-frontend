@@ -21,8 +21,9 @@
     $auth.login(vm.user)
         .then(function(){
           vm.user = {};
+          console.log($auth.getPayload());
           console.info('Sesion Iniciada...');
-          $location.url('/bienvenido');
+          $location.url('/home');
           $mdToast.show(
               $mdToast.simple()
                   .textContent('Sesion Iniciada...')
@@ -82,7 +83,8 @@
 isAdmin.$inject = [];
 function isAdmin() {
   if (isAuthenticated()){
-    return $auth.getPayload().roles.indexOf('ADMIN') !== -1;
+    console.log($auth.getPayload());
+    return $auth.getPayload().roles.indexOf('Admin') !== -1;
   }else{
     return false;
   }

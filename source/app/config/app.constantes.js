@@ -8,7 +8,7 @@
 
     // 'http://localhost:31833/botica-backend-java/webresources')
 
-    'http://localhost:8080/botica_backend/webresources')
+    'http://localhost:43096/biblioteca_FUSM-backend/webresources')
 
     .config(configure);
 
@@ -17,7 +17,7 @@
        //Parametros De configuracion satellizer
        $authProvider.loginUrl = BASEURL + '/auth/login';
        $authProvider.tokenName = 'token';
-       $authProvider.tokenPrefix = 'Botica';
+       $authProvider.tokenPrefix = 'bibliotecaFUSM';
      }
 
 

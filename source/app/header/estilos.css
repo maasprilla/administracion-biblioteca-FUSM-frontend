@@ -1,6 +1,7 @@
 /** Estilos inicio de sesión **/
 div.MainMenu {
   background-color: #2c4c8b;
+  min-height: 6em;
 }
 ul.nav>li>a {
   color: #fff;

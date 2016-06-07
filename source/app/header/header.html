@@ -15,7 +15,12 @@
           </div>
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-nav navbar-right MainMenu-list"><!-- navbar-nav -->
-							<li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" class="MainMenu-link"><span class="glyphicon glyphicon-user" style="color:#2C4C8B;"></span></a></li>
+							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Solicitar Prestamo</a></li>
+							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Lista de Prestamos</a></li>
+							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Mi Historial</a></li>
+							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Ajustes</a></li>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-itemAuth"><a href="" class="MainMenu-linkAuth"><span class="glyphicon glyphicon-user" style="color:#fff;"></span>{{vm.getCurrentUser()}}</a></li>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-itemAuth"><a href="/" ng-click="vm.logout()" class="MainMenu-linkAuth">Cerrar Sesión</a></li>
 						</ul>
 					</div>
 				</div>
