@@ -11,11 +11,20 @@
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
-              .state('home',{
-                  url: '/',                    
-                       template: '<home/>'
-
-              });
+      .state('home',{
+        url: '/home',
+        views:{
+          'encabezadoauth':{
+             template: '<encabezadoauth/>'
+          },
+          'home':{
+             template: '<home/>'
+          },
+          'piedepagina':{
+             template: '<piedepagina/>'
+          }
+        }
+      });
 
 
     }

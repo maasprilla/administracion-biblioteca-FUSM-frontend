@@ -12,10 +12,10 @@
 
     $stateProvider
                   .state('login',{
-                    url: '/login',
+                    url: '/',
                     views:{
-                      'encabezadosimple':{
-                         template: '<encabezadosimple/>'
+                      'encabezado':{
+                         template: '<encabezado/>'
                       },
                       'login':{
                          template: '<login/>'
