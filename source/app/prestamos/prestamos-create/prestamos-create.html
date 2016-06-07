@@ -1,0 +1,51 @@
+<section class="UsersFunctions-container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-2 Sidenav-container">
+				<ul class="nav nav-pills nav-stacked Sidenav" role="menu">
+					<li><a href="#/usuarios-create" class="Sidenav-linkAuth">Registrar Usuarios</a></li>
+					<li><a href="#/prestamos-create" class="Sidenav-linkAuth">Solicitar Prestamo</a></li>
+					<li><a href="#/prestamos-list" class="Sidenav-linkAuth">Lista de Prestamos</a></li>
+					<li><a href="#/prestamos-historial" class="Sidenav-linkAuth">Mi Historial</a></li>
+					<li><a href="#/prestamos-create" class="Sidenav-linkAuth">Ajustes</a></li>
+				</ul>
+			</div>
+			<div id="Content" class="col-sm-10" style="text-align:center; padding-top:6em;">
+				<div  class="PrestamoRequest-container">
+					<h2 class="text-center PrestamoRequest-title">Solicitud de prestamo</h2>
+					<div class="SearchInput-container">
+						<input type="text" class="SearchBook-input" placeholder="Búsqueda de libros">
+					</div>
+					<div class="SearchIcon-container"><span class="glyphicon glyphicon-search" style="font-size:20px; top:0.4em; left:0.3em"></span></div>
+					<br>
+					<h3 class="text-left RequestedBooks-title">Libros solicitados</h3>
+
+					<div class="PrestamoRequest-formContainer">
+						<form action="" class="PrestamoRequest-form">
+
+							<div class="AddBook">
+								<md-button md-no-ink class="md-primary" ng-click="vm.addBook()"><i class="fa fa-book" style="padding-right:0.5em; padding-top:0.5em" ng-disabled="PrestamoRequest-form.$invalid"></i>Agregar Libro</md-button>
+								<div repeat="item in vm.contenidopedido">
+									<md-chips ng-model="vm.contenidopedido" name="fruitName" readonly="vm.readonly" md-max-chips="5">
+										<md-chip-template>
+											<strong>{{$chip.libro.nombre}}</strong>
+											<strong>{{$chip.libro.autor}}</strong>
+										</md-chip-template>
+									</md-chips>
+								</div>
+							</div>
+
+							<div class="PrestamoRequest-buttonContainer">
+								<md-button type="submit" ng-click="vm.request()"md-no-ink class="md-raised md-primary" class="PrestamoRequest-button">Solicitar prestamo</md-button>
+							</div>
+
+						</form>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+</section>

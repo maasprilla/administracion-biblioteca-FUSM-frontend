@@ -15,10 +15,11 @@
         'app.footer',
         'app.header',
         'app.home',
-        'app.homeadmin',
         'app.login',
         'app.password.confirm',
-        'app.password.recovery'
+        'app.password.recovery',
+        'app.prestamos',
+        'app.usuarios'
     ]);
 
 })();

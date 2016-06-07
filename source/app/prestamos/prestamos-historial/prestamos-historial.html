@@ -1,0 +1,42 @@
+<section class="UsersFunctions-container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-2 Sidenav-container">
+				<ul class="nav nav-pills nav-stacked Sidenav" role="menu">
+					<li><a href="#/usuarios-create" class="Sidenav-linkAuth">Registrar Usuarios</a></li>
+					<li><a href="#/prestamos-create" class="Sidenav-linkAuth">Solicitar Prestamo</a></li>
+					<li><a href="#/prestamos-list" class="Sidenav-linkAuth">Lista de Prestamos</a></li>
+					<li><a href="#/prestamos-historial" class="Sidenav-linkAuth">Mi Historial</a></li>
+					<li><a href="#/prestamos-create" class="Sidenav-linkAuth">Ajustes</a></li>
+				</ul>
+			</div>
+			<div id="Content" class="col-sm-10" style="text-align:center; padding-top:6em;">
+				<div id="historial" class="Historial-container">
+					<h2 class="text-center Historial-title">Historial</h2>
+
+					<div class="HistorialTable">
+						<table id="table" class="table table-hover HistorialTable-table" ng-table="vm.presbookTable">
+							<tr>
+								<td data-title="'Ejemplar'" >
+									{{presbook.ejemplar}}
+								</td>
+								<td data-title="'Libro'" >
+									{{presbook.libro}}
+								</td>
+								<td data-title="'Inicio'" >
+									{{presbook.inicio}}
+								</td>
+								<td data-title="'Final'" >
+									{{presbook.final}}
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+</section>
