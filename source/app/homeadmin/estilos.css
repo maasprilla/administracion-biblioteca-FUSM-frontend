@@ -45,9 +45,21 @@ ul.SidenavAdmin>li.active>a.Sidenav-linkAdminAuth:focus {
   border-bottom: 1px solid;
   display: inline-block;
 }
+.RegisUsers-formContainer {
+  padding-bottom: 2.5em;
+}
+.RegisUsers-form {
+  background-color: #fffafa;
+  padding: 1em;
+  border: 1px solid #2c4c8b;
+  border-radius: 0.5px;
+}
+div.RegisUsers-formContainer>form.RegisUsers-form>md-input-container label {
+  color: #2c4c8b;
+}
 .RegisUsers-buttonContainer {
   text-align: center;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 .SettingsLinkAdmin-container {
   margin-top: 0.5em;
@@ -58,37 +70,43 @@ div.SettingsLinkAdmin-container>a.btn-info {
   width: 100%;
   border-color: #2c4c8b;
 }
-.PrestamoListTable,
-.HistorialTable {
+.UsersListTable,
+.HistorialAdminTable,
+.PresReqListTable {
   padding: 3em 0 2em 0;
   text-align: center;
 }
-.PrestamoListTable-table,
-.HistorialTable-table {
+.UsersListTable-table,
+.HistorialAdminTable-table,
+.PresReqListTable-table {
   width: 100%;
   margin: 0 0 50px 0;
 }
-.PrestamoListTable-table th,
-.HistorialTable-table th {
+.UsersListTable-table th,
+.HistorialAdminTable-table th,
+.PresReqListTable-table th {
   background: #2c4c8b;
   color: #fafafa;
   font-weight: bold;
   padding: 5px;
   text-align: center;
 }
-.PrestamoListTable-table td,
-.HistorialTable-table td {
+.UsersListTable-table td,
+.HistorialAdminTable-table td,
+.PresReqListTable-table td {
   color: #2c4c8b;
   border-bottom: 1px solid #2c4c8b;
   padding: 5px;
   text-align: center;
 }
-.PrestamoListTable-table tr:last-child td,
-.HistorialTable-table tr:last-child td {
+.UsersListTable-table tr:last-child td,
+.HistorialAdminTable-table tr:last-child td,
+.PresReqListTable-table tr:last-child td {
   border-top: 1px solid #2c4c8b;
 }
-.PrestamoListTable-table tbody,
-.HistorialTable-table tbody {
+.UsersListTable-table tbody,
+.HistorialAdminTable-table tbody,
+.PresReqListTable-table tbody {
   border: 1px solid #2c4c8b;
 }
 @media screen and (min-width: 768px) {
@@ -108,6 +126,10 @@ div.SettingsLinkAdmin-container>a.btn-info {
     color: #fff;
     padding: 0.6em;
   }
+  .RegisUsers-form {
+    width: 35em;
+    display: inline-block;
+  }
   .SearchBook-input {
     width: 35em;
     height: 2.5em;
@@ -125,6 +147,10 @@ div.SettingsLinkAdmin-container>a.btn-info {
   }
 }
 @media screen and (max-width: 767px) and (min-width: 438px) {
+  .RegisUsers-form {
+    width: 28em;
+    display: inline-block;
+  }
   .SearchBook-input {
     width: 25em;
     height: 2.2em;
@@ -134,11 +160,14 @@ div.SettingsLinkAdmin-container>a.btn-info {
   }
 }
 @media screen and (max-width: 437px) {
-  .SearchBook-input {
+  .RegisUsers-formContainer {
+    padding: 0.3em;
+  }
+  .RegisUsers-form {
     width: 100%;
   }
-  div.PrestamoRequest-buttonContainer>.md-button.md-primary.md-raised {
-    font-size: 11px;
+  .SearchBook-input {
+    width: 100%;
   }
   .SettingsAdminContent {
     width: 100%;
@@ -152,59 +181,136 @@ div.SettingsLinkAdmin-container>a.btn-info {
   .SettingsAdmin-title {
     font-size: 24px;
   }
+  div.RegisUsers-formContainer>form.RegisUsers-form>md-input-container label {
+    font-size: 11px;
+  }
+  div.RegisUsers-buttonContainer>.md-button.md-primary.md-raised {
+    font-size: 11px;
+  }
   .RequestedBooks-title {
     font-size: 19px;
   }
 }
 @media (max-width: 768px) {
-  .PrestamoListTable-table,
-  .HistorialTable-table,
-  .PrestamoListTable-table thead,
-  .HistorialTable-table thead,
-  .PrestamoListTable-table tbody,
-  .HistorialTable-table tbody,
-  .PrestamoListTable-table th,
-  .HistorialTable-table th,
-  .PrestamoListTable-table td,
-  .HistorialTable-table td,
-  .PrestamoListTable-table tr,
-  .HistorialTable-table tr {
+  .UsersListTable-table,
+  .UsersListTable-table thead,
+  .UsersListTable-table tbody,
+  .UsersListTable-table th,
+  .UsersListTable-table td,
+  .UsersListTable-table tr {
     display: block;
   }
-  .PrestamoListTable-table thead tr,
-  .HistorialTable-table thead tr {
+  .UsersListTable-table thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  .PrestamoListTable-table tr,
-  .HistorialTable-table tr {
+  .UsersListTable-table tr {
     border: 1px solid #2c4c8b;
   }
-  .PrestamoListTable-table td,
-  .HistorialTable-table td {
+  .UsersListTable-table td {
     border: none;
     position: relative;
   }
-  .PrestamoListTable-table td:before,
-  .HistorialTable-table td:before {
+  .UsersListTable-table td:before {
     position: relative;
     font-weight: bold;
   }
-  .PrestamoListTable-table td:nth-of-type(1):before,
-  .HistorialTable-table td:nth-of-type(1):before {
+  .UsersListTable-table td:nth-of-type(1):before {
+    content: "Nombre: ";
+  }
+  .UsersListTable-table td:nth-of-type(2):before {
+    content: "Apellido: ";
+  }
+  .UsersListTable-table td:nth-of-type(3):before {
+    content: "Email: ";
+  }
+  .UsersListTable-table td:nth-of-type(4):before {
+    content: "Carrera: ";
+  }
+  .UsersListTable-table td:nth-of-type(5):before {
+    content: "Dirección: ";
+  }
+  .UsersListTable-table td:nth-of-type(6):before {
+    content: "Teléfono: ";
+  }
+}
+@media (max-width: 768px) {
+  .PresReqListTable-table,
+  .PresReqListTable-table thead,
+  .PresReqListTable-table tbody,
+  .PresReqListTable-table th,
+  .PresReqListTable-table td,
+  .PresReqListTable-table tr {
+    display: block;
+  }
+  .PresReqListTable-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .PresReqListTable-table tr {
+    border: 1px solid #2c4c8b;
+  }
+  .PresReqListTable-table td {
+    border: none;
+    position: relative;
+  }
+  .PresReqListTable-table td:before {
+    position: relative;
+    font-weight: bold;
+  }
+  .PresReqListTable-table td:nth-of-type(1):before {
+    content: "Solicitante: ";
+  }
+  .PresReqListTable-table td:nth-of-type(2):before {
     content: "Ejemplar: ";
   }
-  .PrestamoListTable-table td:nth-of-type(2):before,
-  .HistorialTable-table td:nth-of-type(2):before {
+  .PresReqListTable-table td:nth-of-type(3):before {
     content: "Libro: ";
   }
-  .PrestamoListTable-table td:nth-of-type(3):before,
-  .HistorialTable-table td:nth-of-type(3):before {
+  .PresReqListTable-table td:nth-of-type(4):before {
     content: "Inicio: ";
   }
-  .PrestamoListTable-table td:nth-of-type(4):before,
-  .HistorialTable-table td:nth-of-type(4):before {
+  .PresReqListTable-table td:nth-of-type(5):before {
+    content: "Final: ";
+  }
+}
+@media (max-width: 768px) {
+  .HistorialAdminTable-table,
+  .HistorialAdminTable-table thead,
+  .HistorialAdminTable-table tbody,
+  .HistorialAdminTable-table th,
+  .HistorialAdminTable-table td,
+  .HistorialAdminTable-table tr {
+    display: block;
+  }
+  .HistorialAdminTable-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .HistorialAdminTable-table tr {
+    border: 1px solid #2c4c8b;
+  }
+  .HistorialAdminTable-table td {
+    border: none;
+    position: relative;
+  }
+  .HistorialAdminTable-table td:before {
+    position: relative;
+    font-weight: bold;
+  }
+  .HistorialAdminTable-table td:nth-of-type(1):before {
+    content: "Ejemplar: ";
+  }
+  .HistorialAdminTable-table td:nth-of-type(2):before {
+    content: "Libro: ";
+  }
+  .HistorialAdminTable-table td:nth-of-type(3):before {
+    content: "Inicio: ";
+  }
+  .HistorialAdminTable-table td:nth-of-type(4):before {
     content: "Final: ";
   }
 }
