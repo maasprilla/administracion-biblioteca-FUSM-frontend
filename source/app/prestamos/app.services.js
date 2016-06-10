@@ -20,7 +20,8 @@
     function PrestamosTemporales() {
 
       return {
-        prestamo : []
+        prestamo : [],
+        ejemplar : []
       };
 
     }
