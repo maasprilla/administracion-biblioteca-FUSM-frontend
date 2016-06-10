@@ -1,144 +1,19 @@
-/** Estilos inicio de sesión **/
-div.MainMenu {
+.Header {
   background-color: #2c4c8b;
-  min-height: 6em;
+  height: 7em;
 }
-ul.nav>li>a {
-  color: #fff;
-}
-ul.nav>li>a.MainMenu-link {
-  cursor: default;
-}
-.nav>li>a.MainMenu-link:focus {
-  background-color: transparent;
-}
-@media screen and (min-width: 768px) {
-  ul.nav>li>a {
-    padding: 2.8em 0.8em;
-  }
-  header {
-    height: 99.38px;
-  }
-  div.LogoMajor-container>a.navbar-brand {
-    max-width: 232px;
-    margin-top: -18px;
-  }
-}
-@media screen and (max-width: 767px) {
-  div.navbar-header {
-    padding: 1em;
-    header: 79px;
-  }
-  div.LogoMajor-container>a.navbar-brand {
-    max-width: 205px;
-    margin-top: -34px;
-    margin-left: -34px;
-  }
-  header {
-    height: 79px;
-  }
-}
-/** Estilos sesión activa usuario normal **/
-div.MainMenuAuth {
+.MainMenu {
   background-color: #2c4c8b;
 }
-ul.nav>li>a {
-  color: #fff;
+.MainMenu-Container {
+  height: 100%;
 }
-ul.nav>li>a:hover {
-  background: transparent;
+.MainMenu-list>.MainMenu-ItemsMobile {
+  display: none;
 }
-.nav>li>a.MainMenu-linkAuth:focus {
-  background-color: transparent;
+.MainMenu-list>.MainMenu-ItemsDesktop {
+  padding-top: 1.5em;
 }
-@media screen and (min-width: 768px) {
-  ul.nav>li>a {
-    padding: 2.8em 0.8em;
-  }
-  header {
-    height: 99.38px;
-  }
-  div.LogoMajor-container>a.navbar-brand {
-    max-width: 232px;
-    margin-top: -18px;
-  }
-}
-@media screen and (max-width: 767px) {
-  div.navbar-header {
-    padding: 1em;
-    header: 79px;
-  }
-  div.LogoMajor-container>a.navbar-brand {
-    max-width: 205px;
-    margin-top: -34px;
-    margin-left: -34px;
-  }
-  header {
-    height: 79px;
-  }
-}
-@media screen and (min-width: 768px) {
-  ul.nav>li.ItemsMobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  #Content {
-    position: initial;
-  }
-  span.glyphicon.glyphicon-search {
-    position: initial;
-  }
-}
-/** Estilos sesión activa administrador **/
-div.MainMenuAdminAuth {
-  background-color: #2c4c8b;
-}
-ul.nav>li>a {
-  color: #fff;
-}
-ul.nav>li>a:hover {
-  background: transparent;
-}
-.nav>li>a.MainMenu-linkAdminAuth:focus {
-  background-color: transparent;
-}
-@media screen and (min-width: 768px) {
-  ul.nav>li>a {
-    padding: 2.8em 0.8em;
-  }
-  header {
-    height: 99.38px;
-  }
-  div.LogoMajor-container>a.navbar-brand {
-    max-width: 232px;
-    margin-top: -18px;
-  }
-}
-@media screen and (max-width: 767px) {
-  div.navbar-header {
-    padding: 1em;
-    header: 79px;
-  }
-  div.LogoMajor-container>a.navbar-brand {
-    max-width: 205px;
-    margin-top: -34px;
-    margin-left: -34px;
-  }
-  header {
-    height: 79px;
-  }
-}
-@media screen and (min-width: 768px) {
-  ul.nav>li.ItemsAdminMobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  #ContentAdmin {
-    position: initial;
-  }
-  span.glyphicon.glyphicon-search {
-    position: initial;
-  }
+.MainMenu-linkDesktop {
+  color: #fffafa;
 }

@@ -1,98 +1,96 @@
-<section class="UsersFunctions-container">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-2 Sidenav-container">
-				<ul class="nav nav-pills nav-stacked Sidenav" role="menu">
-					<li><a href="#/usuarios-create" class="Sidenav-linkAuth">Registrar Usuarios</a></li>
-					<li><a href="#/prestamos-create" class="Sidenav-linkAuth">Solicitar Prestamo</a></li>
-					<li><a href="#/prestamos-list" class="Sidenav-linkAuth">Lista de Prestamos</a></li>
-					<li><a href="#/prestamos-historial" class="Sidenav-linkAuth">Mi Historial</a></li>
-					<li><a href="#/prestamos-create" class="Sidenav-linkAuth">Ajustes</a></li>
-				</ul>
-			</div>
-			<div id="Content" class="col-sm-10" style="text-align:center; padding-top:6em;">
+<section class="RegisUser">
+	<div class="RegisUsersContainer row">
+		<div class="col-xs-12 col-xs-3 col-md-2 RegisUsersContainer-toolbarMenu" ng-controller="LoginController as login">
+			<ul class="nav toolbarMenu-List" role="menu">
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/usuarios-create" class="toolbarMenu-Link">Registrar Usuarios</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Realizar Reserva</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-list" class="toolbarMenu-Link">Lista de Prestamos</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-historial" class="toolbarMenu-Link">Mi Historial</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Ajustes</a></li>
+			</ul>
+		</div>
 
-				<div id="regisusers" class="RegisUsers-container">
+		<div id="regisusers" class="col-xs-12 col-sm-9 col-md-10 RegisUsersContainer-Container">
 
-					<div class="RegisUsers-formContainer">
-						<form id="formRegistroUser" class="RegisUsers-form" ng-submit="vm.create()">
-							<div class="RegisUsersTitle-container">
-								<h2 class="text-center RegisUsers-title">Registrar Usuarios</h2>
-							</div>
-
-							<md-input-container class="md-block">
-								<label>Nombres</label>
-								<input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="formRegistroUser.nombre">
-								<div ng-messages="formRegistroUser.nombre.$error">
-									<div ng-message="required">This is required.</div>
-									<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-								</div>
-							</md-input-container>
-							<md-input-container class="md-block">
-								<label>Apellidos</label>
-								<input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="formRegistroUser.apellido">
-								<div ng-messages="formRegistroUser.apellido.$error">
-									<div ng-message="required">This is required.</div>
-									<div ng-message="md-maxlength">The lastname has to be less than 30 characters long.</div>
-								</div>
-							</md-input-container>
-							<md-input-container class="md-block">
-								<label>Código</label>
-								<input required md-no-asterisk name="codigo" ng-model="formRegistroUser.codigo">
-								<div ng-messages="formRegistroUser.codigo.$error">
-									<div ng-message="required">This is required.</div>
-								</div>
-							</md-input-container>
-							<md-input-container class="md-block">
-								<label>Carrera</label>
-								<input required md-no-asterisk name="carrera" ng-model="formRegistroUser.carrera">
-								<div ng-messages="formRegistroUser.carrera.$error">
-									<div ng-message="required">This is required.</div>
-								</div>
-							</md-input-container>
-							<md-input-container class="md-block">
-								<label>Dirección</label>
-								<input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="formRegistroUser.direccion">
-								<div ng-messages="formRegistroUser.direccion.$error">
-									<div ng-message="required">This is required.</div>
-									<div ng-message="md-maxlength">The address has to be less than 30 characters long.</div>
-								</div>
-							</md-input-container>
-							<md-input-container class="md-block">
-								<label>Teléfono</label>
-								<input type="number" md-maxlength="10" required md-no-asterisk name="direccion" ng-model="formRegistroUser.telefono">
-								<div ng-messages="formRegistroUser.telefono.$error">
-									<div ng-message="required">This is required.</div>
-									<div ng-message="md-maxlength">The address has to be less than 10 characters long.</div>
-								</div>
-							</md-input-container>
-							<md-input-container class="md-block">
-								<label>Email</label>
-								<input required type="email" name="clientEmail" ng-model="vm.user.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-								<div ng-messages="FormLogin.clientEmail.$error" role="alert">
-									<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-										Your email must be between 10 and 100 characters long and look like an e-mail address.
-									</div>
-								</div>
-							</md-input-container>
-							<md-input-container class="md-block">
-								<label>Password</label>
-								<input required type="password" name="clientName" ng-model="vm.user.password">
-								<div ng-messages="FormLogin.clientName.$error">
-									<div ng-message="required">This is required.</div>
-								</div>
-							</md-input-container>
-
-							<div class="RegisUsers-buttonContainer">
-								<md-button type="submit" ng-click="vm.request()" md-no-ink class="md-raised md-primary" class="RegisUsers-button">Guardar</md-button>
-							</div>
-
-						</form>
+			<div class="RegisUsersContainer-Form">
+				<form id="formRegistroUser" class="RegisUsers-form" ng-submit="vm.create()">
+					<div class="RegisUsersTitle-container">
+						<h2 class="text-center RegisUsers-title">Registrar Usuarios</h2>
 					</div>
 
-				</div>
+					<md-input-container class="md-block">
+						<label>Nombres</label>
+						<input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombres">
+						<div ng-messages="formRegistroUser.nombre.$error">
+							<div ng-message="required">This is required.</div>
+							<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Apellidos</label>
+						<input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellidos">
+						<div ng-messages="formRegistroUser.apellido.$error">
+							<div ng-message="required">This is required.</div>
+							<div ng-message="md-maxlength">The lastname has to be less than 30 characters long.</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Código</label>
+						<input required md-no-asterisk name="codigo" ng-model="vm.usuario.codigo">
+						<div ng-messages="formRegistroUser.codigo.$error">
+							<div ng-message="required">This is required.</div>
+						</div>
+					</md-input-container>
+
+					<md-autocomplete required md-selected-item="vm.usuario.idCarrera" md-search-text="vm.searchCarrerabyNombre" md-items="carrera in vm.findByname(vm.searchCarrerabyNombre)" md-item-text="carrera.nombre" md-floating-label="Carrera">
+						<md-item-template>
+							<span md-highlight-text="vm.searchCarrerabyNombre">{{carrera.nombre}}</span>
+						</md-item-template>
+						<md-not-found>
+							La Carrera "{{vm.searchCarrerabyNombre}}" no se encuentra.
+						</md-not-found>
+					</md-autocomplete>
+
+					<md-input-container class="md-block">
+						<label>Dirección</label>
+						<input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
+						<div ng-messages="formRegistroUser.direccion.$error">
+							<div ng-message="required">This is required.</div>
+							<div ng-message="md-maxlength">The address has to be less than 30 characters long.</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Teléfono</label>
+						<input type="text" md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono">
+						<div ng-messages="formRegistroUser.telefono.$error">
+							<div ng-message="required">This is required.</div>
+							<div ng-message="md-maxlength">The address has to be less than 10 characters long.</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Email</label>
+						<input required type="email" name="clientEmail" ng-model="vm.usuario.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+						<div ng-messages="FormLogin.clientEmail.$error" role="alert">
+							<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+								Your email must be between 10 and 100 characters long and look like an e-mail address.
+							</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Password</label>
+						<input required type="password" name="clientName" ng-model="vm.usuario.password">
+						<div ng-messages="FormLogin.clientName.$error">
+							<div ng-message="required">This is required.</div>
+						</div>
+					</md-input-container>
+
+					<div class="RegisUsers-buttonContainer">
+						<md-button type="submit" md-no-ink class="md-raised md-primary" class="RegisUsers-button">Guardar</md-button>
+					</div>
+
+				</form>
 
 			</div>
+
 		</div>
-	</div>
 </section>

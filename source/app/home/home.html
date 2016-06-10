@@ -1,21 +1,18 @@
-  <section class="UsersFunctions-container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-2 Sidenav-container">
-          <ul class="nav nav-pills nav-stacked Sidenav" role="menu">
-            <li ng-show="vm.isAdmin()"><a href="#/usuarios-create" class="Sidenav-linkAuth">Registrar Usuarios</a></li>
-            <li><a href="#/prestamos-create" class="Sidenav-linkAuth">Solicitar Prestamo</a></li>
-            <li><a href="#/prestamos-list" class="Sidenav-linkAuth">Lista de Prestamos</a></li>
-            <li><a href="#/prestamos-historial" class="Sidenav-linkAuth">Mi Historial</a></li>
-            <li><a href="#/prestamos-create" class="Sidenav-linkAuth">Ajustes</a></li>
-          </ul>
-        </div>
-        <div id="Content" class="col-sm-10" style="text-align:center; padding-top:6em;">
+<section class="RegisUser">
+	<div class="RegisUsersContainer row">
+		<div class="col-xs-12 col-xs-3 col-md-2 RegisUsersContainer-toolbarMenu" ng-controller="LoginController as login">
+			<ul class="nav toolbarMenu-List" role="menu">
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/usuarios-create" class="toolbarMenu-Link">Registrar Usuarios</a></li>
+				<li  class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Realizar Reserva</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-list" class="toolbarMenu-Link">Lista de Prestamos</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-historial" class="toolbarMenu-Link">Mi Historial</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Ajustes</a></li>
+			</ul>
+		</div>
+
+		<div id="regisusers" class="col-xs-12 col-sm-9 col-md-10 RegisUsersContainer-Container">
 
 
 
-
-        </div>
-      </div>
-    </div>
-  </section>
+		</div>
+</section>

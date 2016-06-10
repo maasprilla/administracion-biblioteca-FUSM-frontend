@@ -19,7 +19,11 @@
         'app.password.confirm',
         'app.password.recovery',
         'app.prestamos',
-        'app.usuarios'
+        'app.usuarios',
+        'app.carrera',
+        'app.libro',
+        'app.reserva',
+        'app.ejemplar'
     ]);
 
 })();

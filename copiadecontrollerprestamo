@@ -1,0 +1,122 @@
+(function() {
+    'use strict';
+    angular
+        .module('app.prestamos-create.controller', [])
+        .controller('prestamosCreateCtrl', prestamosCreateCtrl);
+    prestamosCreateCtrl.$inject = ['Libros', 'Reserva', '$mdToast', '$location', 'PrestamosTemporales'];
+
+    function prestamosCreateCtrl(Libros, Reserva, $mdToast, $location, PrestamosTemporales) {
+      // Prueba.qty='miguel';
+      // console.log(Prueba.qty);
+        var vm = this;
+
+        console.log( Libros.findWithDisponibilidad({
+            title: 'e'
+        }));
+        vm.selectedBook;
+        var libros = new Array();
+        vm.ejemplares = new Array();
+        vm.contenidolibro = [];
+        vm.addBook = function() {
+
+            console.log('selected');
+            console.log(vm.selectedBook);
+            var cantLibros = libros.length;
+            var cantEjemplares = vm.ejemplares.length;
+            libros[cantLibros] = vm.selectedBook.libro;
+            vm.ejemplares[cantEjemplares] = vm.selectedBook;
+            PrestamosTemporales.prestamo=vm.selectedBook;
+            console.log('prestamo realizado temporal');
+            console.log(PrestamosTemporales.prestamo);
+
+
+            for (var i = 0; i < libros.length; i++) {
+                vm.contenidolibro[i] = {
+                    nombre: libros[i]
+                };
+            }
+
+
+            // var descripcionlibro = '';
+            // for (var i = 0; i < libros.length; i++) {
+            //     descripcionlibro += libros[i] + '-';
+            // }
+            vm.selectedBook = " ";
+            console.log('lista de selecciones');
+            console.log(vm.ejemplares);
+            console.log('numero de ejemplares');
+            console.log(vm.ejemplares.length);
+            console.log('prueba de random');
+            var a=getRandom(0,3);
+            console.log(a);
+
+
+
+            //elegirEjemplar(vm.ejemplares);
+
+
+
+        }
+
+        vm.create = function() {
+
+          vm.reserva={ejemplarList:elegirEjemplar(vm.ejemplares)};
+            console.log(vm.reserva);
+            Reserva.save(vm.reserva, function() {
+                $location.url('/home');
+                $mdToast.show(
+                    $mdToast.simple()
+                    .textContent('Registro Exitoso...')
+                    .position('bottom right'));
+            }, function(error) {
+                $mdToast.show(
+                    $mdToast.simple()
+                    .textContent('Error')
+                    .position('bottom right'));
+
+            });
+
+        }
+
+        vm.findBookByTitle = function(str) {
+            return Libros.findWithDisponibilidad({
+                title: str
+            });
+        }
+
+        // Retorna un número aleatorio entre min (incluido) y max (excluido)
+        function getRandom(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function elegirEjemplar(lista) {
+          console.log(lista);
+          console.log('lista ingresada');
+          var listaextraida = new Array();
+          for (var i = 0; i < lista.length; i++) {
+              listaextraida[i] = {
+                  idEjemplares: extraerEjemplar(lista[i].ejemplarList)
+              };
+              console.log('cont');
+              console.log(i);
+          }
+          console.log('extraido');
+          console.log(listaextraida);
+
+          return listaextraida;
+        }
+
+        function extraerEjemplar(lista) {
+          if(lista!=null){
+          var a=getRandom(0,lista.length);
+          return lista[a].idEjemplares;
+          }else {
+            return null;
+          }
+        }
+
+
+
+
+    }
+})();

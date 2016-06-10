@@ -1,26 +1,26 @@
-<header class="HeaderIndex">
+<header class="Header" >
 			<div class="navbar navbar-fixed-top MainMenu" role="navigation" style="margin-bottom:0">
-				<div class="container-fluid NavbarElements-container">
+				<div class="container-fluid MainMenu-Container">
 					<div class="navbar-header">
 						<div class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="border-color:none">
 							<span class="icon-bar" style="background:#fff"></span>
 							<span class="icon-bar" style="background:#fff"></span>
 							<span class="icon-bar" style="background:#fff"></span>
 						</div>
-						<div class="LogoMajor-container">
-							<a class="navbar-brand pull-left" href="/">
+						<div class="Logo">
+							<a class="navbar-brand" href="/">
                 <img alt="Brand" src="./images/logo.png" class="Logo-image" style="width:100%">
               </a>
 						</div>
           </div>
-					<div class="navbar-collapse collapse MainMenu-listContainer">
+					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right MainMenu-list"><!-- navbar-nav -->
-							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Solicitar Prestamo</a></li>
-							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Lista de Prestamos</a></li>
-							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Mi Historial</a></li>
-							<li id="" class="MainMenu-itemAuth ItemsMobile"><a href="" class="MainMenu-linkAuth">Ajustes</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-itemAuth"><a href="" class="MainMenu-linkAuth"><span class="glyphicon glyphicon-user" style="color:#fff;"></span>{{vm.getCurrentUser()}}</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-itemAuth"><a href="/" ng-click="vm.logout()" class="MainMenu-linkAuth">Cerrar Sesión</a></li>
+							<li id="" class="MainMenu-ItemsMobile"><a href="" class="MainMenu-linkMobile">Solicitar Prestamo</a></li>
+							<li id="" class="MainMenu-ItemsMobile"><a href="" class="MainMenu-linkMobile">Lista de Prestamos</a></li>
+							<li id="" class="MainMenu-ItemsMobile"><a href="" class="MainMenu-linkMobile">Mi Historial</a></li>
+							<li id="" class="MainMenu-ItemsMobile"><a href="" class="MainMenu-linkMobile">Ajustes</a></li>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-ItemsDesktop"><a href="" class="MainMenu-linkDesktop"><span class="glyphicon glyphicon-user" style="color:#fff;"></span>{{vm.getCurrentUser()}}</a></li>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-ItemsDesktop"><a href="/" ng-click="vm.logout()" class="MainMenu-linkDesktop">Cerrar Sesión</a></li>
 						</ul>
 					</div>
 				</div>

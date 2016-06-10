@@ -83,8 +83,7 @@
 isAdmin.$inject = [];
 function isAdmin() {
   if (isAuthenticated()){
-    console.log($auth.getPayload());
-    return $auth.getPayload().roles.indexOf('Admin') !== -1;
+    return $auth.getPayload().roles.indexOf('[ADMIN]') !== -1;
   }else{
     return false;
   }
@@ -94,7 +93,7 @@ function isAdmin() {
 isUser.$inject = [];
 function isUser() {
   if (isAuthenticated()){
-    return $auth.getPayload().roles.indexOf('USER') !== -1;
+    return $auth.getPayload().roles.indexOf('[ALUM]') !== -1;
   }else{
     return false;
   }

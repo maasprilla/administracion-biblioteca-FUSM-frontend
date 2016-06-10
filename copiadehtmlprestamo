@@ -1,0 +1,63 @@
+<section class="PrestamoCreate">
+	<div class="PrestamoCreateContainer row">
+		<div class="col-xs-12 col-xs-3 col-md-2 PrestamoCreateContainer-toolbarMenu" ng-controller="LoginController as login">
+			<ul class="nav toolbarMenu-List" role="menu">
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/usuarios-create" class="toolbarMenu-Link">Registrar Usuarios</a></li>
+				<li  class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Realizar Reserva</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-list" class="toolbarMenu-Link">Lista de Prestamos</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-historial" class="toolbarMenu-Link">Mi Historial</a></li>
+				<li class="toolbarMenu-Item"><a  class="toolbarMenu-Link">Ajustes</a></li>
+			</ul>
+		</div>
+
+		<div id="prestamoCreate" class="col-xs-12 col-sm-9 col-md-10 PrestamoCreateContainer-Container">
+			<div class="PrestamoRequest-container">
+				<h2 class="text-center PrestamoRequest-title">Solicitud de prestamo</h2>
+				<div>
+					<div class="SearchIcon"><span class="glyphicon glyphicon-search" style="font-size:20px; top:0.4em; left:0.3em"></span></div>
+					<md-autocomplete class="SearchBook-Autocomplete" required md-selected-item="vm.selectedBook" md-search-text="vm.searchBookByTitle" md-items="book in vm.findBookByTitle(vm.searchBookByTitle)" md-item-text="book.libro.titulo" md-floating-label="Libros">
+						<md-item-template>
+							<span md-highlight-text="vm.searchBookByTitle">{{book.libro.titulo}}-{{book.estado}}</span>
+						</md-item-template>
+						<md-not-found>
+							El Libro "{{vm.searchBookByTitle}}" no se encuentra.
+						</md-not-found>
+					</md-autocomplete>
+					<md-button md-no-ink class="md-primary" ng-click="vm.addBook()"><i class="fa fa-book" style="padding-right:0.5em; padding-top:0.5em" ng-disabled="PrestamoRequest-form.$invalid"></i>Agregar Libro</md-button>
+				</div>
+				<h3 class="text-left RequestedBooks-title">Libros solicitados</h3>
+
+
+				<div class="PrestamoRequest-formContainer">
+					<form action="" class="PrestamoCreate-form" ng-submit="vm.create()">
+
+						<div ng-repeat="libro in vm.contenidolibro" class="CardBook">
+							<md-card >
+								<img src="/app/prestamos/prestamos-create/washedout.png" class="md-card-image" alt="Washed Out">
+								<md-card-title>
+									<md-card-title-text>
+										<h4 >{{libro.nombre.titulo}}</h4>
+									</md-card-title-text>
+								</md-card-title>
+								<md-card-content>
+									<p>Autor</p>
+								</md-card-content>
+								<md-card-actions layout="row" layout-align="end center">
+									<md-button>Descartar</md-button>
+									<md-button>Ver mas</md-button>
+								</md-card-actions>
+							</md-card>
+						</div>
+						<div data-pagination="" data-num-pages="vm.numPages()"
+      data-current-page="vm.currentPage" data-max-size="vm.maxSize"
+      data-boundary-links="true"></div>
+
+				<md-button type="submit" class="md-raised md-primary">Solicitar Prestamo</md-button>
+					</form>
+
+				</div>
+			</div>
+
+
+		</div>
+</section>
