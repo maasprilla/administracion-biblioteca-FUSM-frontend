@@ -9,7 +9,7 @@
     return{
       scope:{},
       templateUrl:'app/prestamos/prestamos-list/prestamos-list.html',
-      controller: 'prestamosListCtrl',
+      controller: 'reservasListCtrl',
       controllerAs: 'vm'
     };
   }

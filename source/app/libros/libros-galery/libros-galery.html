@@ -1,0 +1,57 @@
+<section class="LibrosGalery">
+	<div class="LibrosGaleryContainer row">
+		<div class="col-xs-12 col-xs-3 col-md-2 LibrosGaleryContainer-toolbarMenu" ng-controller="LoginController as login">
+			<ul class="nav toolbarMenu-List" role="menu">
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/usuarios-create" class="toolbarMenu-Link">Registrar Usuarios</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Realizar Reserva</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-list" class="toolbarMenu-Link">Lista de Reservas</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-historial" class="toolbarMenu-Link">Mi Historial</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/libros-galery" class="toolbarMenu-Link">Libros</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Ejemplares</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Autores</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Categorias</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Editoriales</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Ajustes</a></li>
+			</ul>
+		</div>
+
+		<div id="LibrosGalery" class="col-xs-12 col-sm-9 col-md-10 LibrosGaleryContainer-Container">
+			<div class="PrestamoRequest-container">
+
+
+
+				<div class="">
+
+					<a href="#/libros-create">Registrar Libros</a>
+					<a href="#/libros-list">Listado de Libros</a>
+					<form action="" class="LibrosGalery-form" ng-submit="vm.create()">
+
+						<div ng-repeat="item in vm.libros | orderBy: 'titulo'" class="CardBook">
+							<md-card>
+								<img src="/app/libros/libros-galery/washedout.png" class="md-card-image" alt="Washed Out">
+								<md-card-title>
+									<md-card-title-text>
+										<h4>{{item.titulo}}</h4>
+									</md-card-title-text>
+								</md-card-title>
+								<md-card-content>
+									<p>Autor</p>
+								</md-card-content>
+								<md-card-actions layout="row" layout-align="end center">
+									<md-button>Ver mas</md-button>
+								</md-card-actions>
+							</md-card>
+						</div>
+						<div data-pagination="" data-num-pages="vm.numPages()" data-current-page="vm.currentPage" data-max-size="vm.maxSize" data-boundary-links="true"></div>
+
+
+					</form>
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+</section>

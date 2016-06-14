@@ -34,6 +34,7 @@
     "wiredep": "^3.0.0"
   },
   "dependencies": {
+    "angular-bootstrap-datetimepicker": "^1.0.1",
     "express": "^4.13.4"
   }
 }

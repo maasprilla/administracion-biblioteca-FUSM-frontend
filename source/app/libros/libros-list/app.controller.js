@@ -1,32 +1,33 @@
 (function() {
     'use strict';
 
-    angular.module('app.prestamos-list.controller', []).controller('reservasListCtrl', reservasListCtrl);
+    angular.module('app.libros.list.controller', []).controller('librosListCtrl', librosListCtrl);
 
 
-    reservasListCtrl.$inject = ['$q', '$location', '$mdToast', 'Reserva', 'NgTableParams'];
+    librosListCtrl.$inject = ['$q', '$location', '$mdToast', 'Libros', 'NgTableParams'];
 
-    function reservasListCtrl($q, $location, $mdToast, Reserva, NgTableParams) {
+    function librosListCtrl($q, $location, $mdToast, Libros, NgTableParams) {
 
         var vm = this;
-        vm.reserva = Reserva.query();
+        vm.libros = Libros.query();
 
         activate();
 
         function activate() {
-            var promises = [getReserva()];
+            var promises = [getLibros()];
             return $q.all(promises).then(function() {
 
             });
         }
 
-        function getReserva() {
+        function getLibros() {
 
-            return Reserva.query().$promise.then(function(data) {
+            return Libros.query().$promise.then(function(data) {
+                console.log('data');
+                console.log(data);
                 vm.info = data;
 
-
-                vm.reservaTable = new NgTableParams({
+                vm.librosTable = new NgTableParams({
                     page: 1,
                     count: 5
                 }, {

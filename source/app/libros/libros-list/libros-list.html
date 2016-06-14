@@ -21,18 +21,36 @@
 
 
                 <section class="UserTable">
-                    <h2 class="UserTable-title">Listado de Reservas</h2>
+                    <h2 class="UserTable-title">Lista de usuarios</h2>
                     <div class="container  UserTable-containerTable">
-											<table id="table" class="table table-hover UserTable-table" ng-table="vm.reservaTable">
-												<tr ng-repeat="reserva in vm.data">
-													<td data-title="'numero Consecutivo'" >
-														{{reserva.ejemplarList[0].numeroConsecutivo}}
-													</td>
-													<td data-title="'Libro'" >
-														{{reserva.ejemplarList[0].idLibro.titulo}}
-													</td>
-												</tr>
-											</table>
+                        <table id="table" class="table table-hover UserTable-table" ng-table="vm.librosTable">
+                            <tr ng-repeat="libro in vm.data">
+                                <td data-title="'Tutulo'">
+                                    {{libro.titulo}}
+                                </td>
+                                <td data-title="'Procedencia'">
+                                    {{libro.procedenciaLibro.nombre}}
+                                </td>
+                                <td data-title="'Editorial'">
+                                    {{libro.idEditorial.nombre}}
+                                </td>
+                                <!-- <td data-title="'Año de Publicacion'">
+                                    {{libro.anioPublicacion}}
+                                </td>
+                                <td data-title="'Fecha de Entrada'">
+                                    {{libro.fechaEntrada}}
+                                </td>
+                                <td data-title="'Carrera'">
+                                    {{libro.idCarrera.nombre}}
+                                </td> -->
+                                <td data-title="'Tomo'">
+                                    {{libro.tomo}}
+                                </td>
+                                <!-- <td data-title="'Categoria'">
+                                    {{libro.idCategorias.nombre}}
+                                </td> -->
+                            </tr>
+                        </table>
                     </div>
 
 

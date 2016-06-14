@@ -8,7 +8,7 @@
 
     // 'http://localhost:31833/botica-backend-java/webresources')
 
-    'http://localhost:43096/biblioteca_FUSM/webresources')
+    'http://bibliotecafusmbackend-devsoftweb.rhcloud.com/biblioteca_FUSM/webresources')
 
     .config(configure);
 

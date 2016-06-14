@@ -3,9 +3,14 @@
 		<div class="col-xs-12 col-xs-3 col-md-2 RegisUsersContainer-toolbarMenu" ng-controller="LoginController as login">
 			<ul class="nav toolbarMenu-List" role="menu">
 				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/usuarios-create" class="toolbarMenu-Link">Registrar Usuarios</a></li>
-				<li  class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Realizar Reserva</a></li>
-				<li class="toolbarMenu-Item"><a href="#/prestamos-list" class="toolbarMenu-Link">Lista de Prestamos</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Realizar Reserva</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-list" class="toolbarMenu-Link">Lista de Reservas</a></li>
 				<li class="toolbarMenu-Item"><a href="#/prestamos-historial" class="toolbarMenu-Link">Mi Historial</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/libros-galery" class="toolbarMenu-Link">Libros</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Ejemplares</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Autores</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Categorias</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Editoriales</a></li>
 				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Ajustes</a></li>
 			</ul>
 		</div>

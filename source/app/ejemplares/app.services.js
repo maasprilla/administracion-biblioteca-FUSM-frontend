@@ -17,6 +17,14 @@
           estado:'@estado',
           idLibro:'@idLibro'
         }
+      },
+      findByLibro:{
+        url:BASEURL + '/ejemplares/libro/:idLibro',
+        method:'GET',
+        isArray:true,
+        params:{
+          idLibro:'@idLibro'
+        }
       }
     }
   );

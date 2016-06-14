@@ -15,43 +15,43 @@
 .HeaderUserList-icons {
   padding: 1em 1.5em 1em 0;
 }
-.PrestamoListTable {
+.UserTable {
   padding: 2em 0;
   font-family: 'Open Sans';
   text-align: center;
   background-color: #fafafa;
 }
-.PrestamoListTable-title {
+.UserTable-title {
   margin-top: 0;
   padding-bottom: 1em;
   color: rgba(17,85,34,0.533) 3;
 }
-.PrestamoListTable-containerTable {
+.UserTable-containerTable {
   background-color: #fafafa;
   padding: 0;
   padding-top: 3em;
 }
-.PrestamoListTable-table {
+.UserTable-table {
   width: 100%;
   margin: 0 0 50px 0;
 }
-.PrestamoListTable-table th {
+.UserTable-table th {
   background: #152836;
   color: #fafafa;
   font-weight: bold;
   padding: 5px;
   text-align: center;
 }
-.PrestamoListTable-table td {
+.UserTable-table td {
   color: #337ab7;
   border-bottom: 1px solid #ccc;
   padding: 5px;
   text-align: center;
 }
-.PrestamoListTable-table tr:last-child td {
+.UserTable-table tr:last-child td {
   border-top: 1px solid #ccc;
 }
-.PrestamoListTable-table tbody {
+.UserTable-table tbody {
   border: 1px solid #152836;
 }
 .ng-binding.sort-indicator {

@@ -10,7 +10,7 @@
         'satellizer',
         'ngTable',
         '720kb.datepicker',
-        //'templates',
+        'templates',
         'app.config',
         'app.footer',
         'app.header',
@@ -23,7 +23,11 @@
         'app.carrera',
         'app.libro',
         'app.reserva',
-        'app.ejemplar'
+        'app.ejemplar',
+        'app.libro',
+        'app.procedencia',
+        'app.editoriales',
+        'app.categorias'
     ]);
 
 })();

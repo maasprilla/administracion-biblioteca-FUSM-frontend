@@ -1,0 +1,114 @@
+<section class="LibrosCreate">
+	<div class="LibrosCreateContainer row">
+		<div class="col-xs-12 col-xs-3 col-md-2 LibrosCreateContainer-toolbarMenu" ng-controller="LoginController as login">
+			<ul class="nav toolbarMenu-List" role="menu">
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/usuarios-create" class="toolbarMenu-Link">Registrar Usuarios</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Realizar Reserva</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-list" class="toolbarMenu-Link">Lista de Reservas</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-historial" class="toolbarMenu-Link">Mi Historial</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a href="#/libros-galery" class="toolbarMenu-Link">Libros</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Ejemplares</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Autores</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Categorias</a></li>
+				<li ng-show="login.isAdmin()" class="toolbarMenu-Item"><a class="toolbarMenu-Link">Editoriales</a></li>
+				<li class="toolbarMenu-Item"><a href="#/prestamos-create" class="toolbarMenu-Link">Ajustes</a></li>
+			</ul>
+		</div>
+
+		<div id="LibrosCreate" class="col-xs-12 col-sm-9 col-md-10 LibrosCreateContainer-Container">
+			<div class="LibrosCreate-container">
+
+
+
+				<div>
+					<div>
+						<a href="#/libros-list">Listado de Libros</a>
+					</div>
+					<form class="LibrosCreate-form" ng-submit="vm.create()">
+
+
+						<div class="RegisBookTitle-container">
+							<h2 class="text-center RegisBook-title">Registrar Libro</h2>
+						</div>
+
+						<md-input-container class="md-block">
+							<label>Titulo</label>
+							<input md-maxlength="30" required md-no-asterisk name="titulo" ng-model="vm.libro.titulo">
+							<div ng-messages="formRegisBook.titulo.$error">
+								<div ng-message="required">This is required.</div>
+								<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+							</div>
+						</md-input-container>
+
+						<md-input-container class="LibrosCreate-input">
+							<label>Procedencia</label>
+							<md-select ng-model="vm.libro.procedenciaLibro.procedenciaLibro">
+								<md-option ng-repeat="procedencia in vm.procedencias" value="{{procedencia.procedenciaLibro}}">{{procedencia.nombre}}</md-option>
+							</md-select>
+						</md-input-container>
+
+						<md-input-container class="LibrosCreate-input">
+							<label>Editorial</label>
+							<md-select ng-model="vm.libro.idEditorial.idEditorial">
+								<md-option ng-repeat="editorial in vm.editoriales" value="{{editorial.idEditorial}}">{{editorial.nombre}}</md-option>
+							</md-select>
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<label>Año de Publicacion</label>
+							<input type="number" md-maxlength="4" required md-no-asterisk name="aniopublicacion" ng-model="vm.libro.anioPublicacion">
+							<div ng-messages="formRegisBook.aniopublicacion.$error">
+								<div ng-message="required">This is required.</div>
+								<div ng-message="md-maxlength">The name has to be less than 4 characters long.</div>
+							</div>
+						</md-input-container>
+
+						<md-input-container class="md-block ">
+							<label>Fecha de Entrada</label>
+							<datepicker date-format="yyyy-MM-dd">
+								<input ng-model="vm.libro.fechaEntrada" />
+							</datepicker>
+						</md-input-container>
+
+
+
+						<md-autocomplete required md-selected-item="vm.libro.idCarrera" md-search-text="vm.searchCarrerabyNombre" md-items="carrera in vm.findByname(vm.searchCarrerabyNombre)" md-item-text="carrera.nombre" md-floating-label="Carrera">
+							<md-item-template>
+								<span md-highlight-text="vm.searchCarrerabyNombre">{{carrera.nombre}}</span>
+							</md-item-template>
+							<md-not-found>
+								La Carrera "{{vm.searchCarrerabyNombre}}" no se encuentra.
+							</md-not-found>
+						</md-autocomplete>
+
+						<md-input-container class="md-block">
+							<label>Tomo</label>
+							<input md-maxlength="30" required md-no-asterisk name="tomo" ng-model="vm.libro.tomo">
+							<div ng-messages="formRegisBook.tomo.$error">
+								<div ng-message="required">This is required.</div>
+								<div ng-message="md-maxlength">The address has to be less than 30 characters long.</div>
+							</div>
+						</md-input-container>
+
+						<md-input-container class="LibrosCreate-input">
+							<label>Categoria</label>
+							<md-select ng-model="vm.libro.idCategorias.idCategorias">
+								<md-option ng-repeat="categoria in vm.categorias" value="{{categoria.idCategorias}}">{{categoria.nombre}}</md-option>
+							</md-select>
+						</md-input-container>
+
+
+						<div class="RegisBook-buttonContainer">
+							<md-button type="submit" md-no-ink class="md-raised md-primary" class="RegisBook-button">Guardar</md-button>
+						</div>
+
+					</form>
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+</section>
